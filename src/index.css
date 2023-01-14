@@ -13,23 +13,21 @@ code {
 }
 
 .news {
-  width:340px;
-  height:220px;
+  height:340px;
   display: flex;
-
 }
 
 .news > div {
-  height: 340px;
-  width: 250px;
+  height: 250px;
+  width: 280px;
 }
 .news > div:hover {
   cursor: pointer;
 }
 
 .news img {
-  width:340px;
   height:250px;
+  width:280px;
   object-fit:cover;
 }
 
