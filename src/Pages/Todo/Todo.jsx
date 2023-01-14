@@ -14,21 +14,32 @@ function Todo () {
     const [isAdd, setIsAdd] = useState(action === TodoAction.ADD ? true : false);
 
     const saveTodo = () => {
-        dispatch(setTodo("1"));
+        console.log(input, 'save')
+        dispatch(setTodo(input));
+    }
+
+    const [input, setInput] = useState({});
+    const onChangeInput = (e) => {
+        const { target : { value, name }} = e;
+        
+        setInput({
+            ...input,
+            [name]: value
+        })
     }
 
     return (
-        <>
+        <div className="todos">
             <button onClick={() => navigate(-1)}>뒤로가기</button>
-            <p>{isAdd ? "할 일 추가" : "할 일 수정"}</p>
-            <strong>제목</strong>
-            <input name="title"></input>
-            <strong>설명</strong>
-            <input name="cntnt"></input>
-            <strong>반복</strong>
-            <input name="days"></input>
+            <strong>{isAdd ? "할 일 추가" : "할 일 수정"}</strong>
+            <p>제목</p>
+            <input name="title" onChange={(e) => onChangeInput(e)}></input>
+            <p>설명</p>
+            <textarea name="cntnt" onChange={(e) => onChangeInput(e)}></textarea>
+            <p>반복</p>
+            <input name="days" onChange={(e) => onChangeInput(e)}></input>
             <button onClick={() =>saveTodo()}>저장하기</button>
-        </>
+        </div>
     )
 }
 

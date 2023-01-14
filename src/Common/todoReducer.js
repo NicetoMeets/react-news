@@ -9,10 +9,16 @@ const todoSlice = createSlice({
     initialState,
     reducers: {
         setTodo: (state, action) => {
-            return [...state, action.payload];
+            // return {todo: []}
+            return {todo: [...state.todo, action.payload]};
+
+        },
+        removeTodo: (state, action) => {
+            console.log(state)
+            return {todo: []};
         }
     }
 });
 
-export const {setTodo} = todoSlice.actions;
+export const {setTodo, removeTodo} = todoSlice.actions;
 export default todoSlice.reducer;

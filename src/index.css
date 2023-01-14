@@ -37,9 +37,25 @@ code {
   font-size: small;
 }
 
+/* 할일 */
+.todos {
+  width: 100%;;
+}
+.todos * {
+}
+.todos input{
+  width: 100%;
+}
+.todos textarea{
+  width: 100%;
+}
+
 /* Footer */
 .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+.footer button{
+  height: 200px;
 }
