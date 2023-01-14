@@ -12,25 +12,34 @@ code {
     monospace;
 }
 
+/* 뉴스 */
 .news {
   height:340px;
   display: flex;
+  overflow: auto;
+  white-space: normal;
 }
-
 .news > div {
-  height: 250px;
+  height: 340px;
   width: 280px;
 }
 .news > div:hover {
   cursor: pointer;
 }
-
 .news img {
-  height:250px;
+  height:200px;
   width:280px;
   object-fit:cover;
 }
-
 .news p {
+  width:280px;
+  word-wrap: break-word;
   font-size: small;
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
