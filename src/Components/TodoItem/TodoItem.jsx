@@ -1,6 +1,12 @@
+import { useSelector } from "react-redux";
 
 function TodoItem () {
 
+    const todos = useSelector((state) => {
+        return state.todo;
+    })
+
+    console.log(todos, 'todos')
 
     return (
         <>
