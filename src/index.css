@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.news {
+  width:340px;
+  height:220px;
+  display: flex;
+
+}
+
+.news > div {
+  height: 340px;
+  width: 250px;
+}
+.news > div:hover {
+  cursor: pointer;
+}
+
+.news img {
+  width:340px;
+  height:250px;
+  object-fit:cover;
+}
+
+.news p {
+  font-size: small;
+}
