@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FooterMode, TodoAction } from "../../Common/action";
 import { setTodo } from "../../Common/todoReducer";
@@ -32,8 +32,6 @@ function Todo () {
     const onChangeDays = (e) => {
         const { target : { value, name }} = e;
 
-        console.log(e)
-
         if (input.days.includes(name)){
 
             let temp = input.days;
@@ -58,12 +56,17 @@ function Todo () {
     }
 
     const saveTodo = () => {
+
         const {title, cntnt, days} = input;
+        // const prevTodo = prevTodos.filter(item => item.title = title);
+        // console.log(prevTodo)
+        // if (prevTodo.length > 0) return alert("중복된 제목입니다.");
         if (!title) return alert("제목은 필수입니다.");
 
         dispatch(setTodo(input));
 
         alert("저장이 완료되었습니다.");
+        navigate('/');
     }
 
     return (
@@ -84,6 +87,7 @@ function Todo () {
                 <button className={input.days.includes("sat") ? "isChecked" : "isNotChecked"} name="sat" onClick={(e) => onChangeDays(e)}>토</button>
                 <button className={input.days.includes("sun") ? "isChecked" : "isNotChecked"} name="sun" onClick={(e) => onChangeDays(e)}>일</button>
             </div>
+            <div style={{"marginBottom" : "80px"}}></div>
             <Footer mode={FooterMode.ADD_TODO} event={saveTodo}/>
         </div>
     )
