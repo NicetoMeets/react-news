@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { TodoAction } from "../../Common/action";
 import { removeTodo } from "../../Common/todoReducer";
 
 function TodoItem () {
@@ -9,13 +10,20 @@ function TodoItem () {
     const todos = useSelector((state) => {
         return state.todo.todo;
     })
-
-    const onClickTodo = () => {
-        
+    const onClickTodo = (item, idx) => {
+        navigate('/todo', {
+            state: {
+                action: TodoAction.UPDATE,
+                todo: item,
+                idx: idx
+            }
+        })
     }
 
     const onClickRemove = (idx) => {
+        if (window.confirm('삭제하시겠습니까?'));
         dispatch(removeTodo(idx));
+        navigate('')
     }
 
     return (
@@ -24,7 +32,7 @@ function TodoItem () {
             <div>
             {
                 todos && todos.todo.map((item, idx) => {
-                    return <div key={idx} className="today" onClick={() => onClickTodo(item)}>
+                    return <div key={idx} className="today" onClick={() => onClickTodo(item, idx)}>
                         <strong>{item.title}</strong>
                         <div className="close" onClick={() => onClickRemove(idx)}></div>
                         <p>{item.cntnt}</p>

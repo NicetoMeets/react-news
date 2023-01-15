@@ -12,19 +12,20 @@ const todoSlice = createSlice({
             return {todo: [...state.todo, action.payload]};
         },
         updateTodo: (state, action) => {
-
+            const updateTodo = action.payload.updateInput;
+            const updateIdx = action.payload.updateIdx;
+            const result = current(state).todo.map((item, idx) => {
+                if (idx == updateIdx) return updateTodo;
+                else return item;
+            });
+            return {todo: result}
         },
         removeTodo: (state, action) => {
             const deleteIdx = action.payload;
-            console.log(current(state).todo.filter((item, idx) => {
-                console.log(idx != deleteIdx)
-                console.log(idx, deleteIdx)
-                return (idx != deleteIdx)
-            }))
             return {todo: current(state).todo.filter((item, idx) => idx != deleteIdx)};
         }
     }
 });
 
-export const {setTodo, removeTodo} = todoSlice.actions;
+export const {setTodo, updateTodo, removeTodo} = todoSlice.actions;
 export default todoSlice.reducer;
