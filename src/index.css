@@ -71,6 +71,37 @@ code {
   padding: 10px;
   border-radius: 10px;
 }
+.days {
+  width: 105%;
+  height: 80px;
+  border-radius: 10px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.days button {
+  width: calc(1em / 0.5);
+  height: calc(1em / 0.5);
+  margin: auto;
+
+  border-radius: 50%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  border: none
+}
+.isChecked {
+  background-color: rgb(213, 219, 42);
+}
+.isNotChecked {
+  background-color: rgb(187, 187, 187);
+}
 
 /* TODO */
 .today{

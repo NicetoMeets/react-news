@@ -1,3 +1,4 @@
+import { FooterMode } from "../../Common/action";
 import News from "../../Components/News/News";
 import TodoItem from "../../Components/TodoItem/TodoItem";
 import Footer from "../../Layout/Footer/Footer";
@@ -15,7 +16,7 @@ function Home () {
             <News />
             <TodoItem />
             <div style={{"marginBottom" : "80px"}}></div>
-            <Footer />
+            <Footer mode={FooterMode.ADD_PAGE}/>
         </div>
         
     )
