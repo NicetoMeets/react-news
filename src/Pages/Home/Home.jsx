@@ -9,6 +9,7 @@ function Home () {
     const now = new Date();
     const date = now.getDate();
     const day = WEEKDAY[now.getDay()];
+    
     return (
         <div className="home">
             <h1>News TO-DO!</h1>
