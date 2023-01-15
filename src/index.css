@@ -5,11 +5,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(228, 228, 220);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* 메인 */
+.home {
+  padding: 10px 10px 10px 10px;
 }
 
 /* 뉴스 */
@@ -20,8 +26,11 @@ code {
   white-space: normal;
 }
 .news > div {
-  height: 340px;
+  height: 300px;
   width: 280px;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 .news > div:hover {
   cursor: pointer;
@@ -30,32 +39,71 @@ code {
   height:200px;
   width:280px;
   object-fit:cover;
+  border-radius: 20px;
 }
 .news p {
-  width:280px;
+  width:270px;
   word-wrap: break-word;
   font-size: small;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* 할일 */
 .todos {
-  width: 100%;;
-}
-.todos * {
+  width: 90%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .todos input{
-  width: 100%;
+  width: 103%;
+  height: 50px;
+  font-size: 1.5em;
+  border-radius: 10px;
 }
 .todos textarea{
-  width: 100%;
+  width: 105%;
+  height: 300px;
+  font-size: 2.5em;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
 }
+
+/* TODO */
+.today{
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+.today:hover{
+  cursor: pointer;
+}
+.today *{
+  height: 30px;
+  margin-left: 40px;
+}
+.close {
+  float: right;
+}
+.close:after {
+  display: inline-block;
+  content: "\00d7"; 
+  font-size:30pt;}
 
 /* Footer */
 .footer {
+  width: 95%;
+  height: 70px;
   position: fixed;
   bottom: 0;
-  width: 100%;
-}
-.footer button{
-  height: 200px;
+  /* margin-left: 10px; */
+  /* margin-right: 10px; */
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: yellow;
 }

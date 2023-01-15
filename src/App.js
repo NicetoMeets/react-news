@@ -20,7 +20,7 @@ function App() {
             <Route path='/todo' element={<Todo />} />
             <Route path='*' element={<Home />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </PersistGate>
     </Provider>

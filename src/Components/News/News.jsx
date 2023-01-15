@@ -21,7 +21,7 @@ function News () {
 
     return (
         <>
-            <strong>오늘의 뉴스</strong>
+            <h2>오늘의 뉴스</h2>
             <div className="news">
                 {news && news.map((item, idx) => {
                     return <div key={idx} onClick={() => onClickNews(item.url)}>
