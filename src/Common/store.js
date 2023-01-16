@@ -3,7 +3,6 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import storageSession from "redux-persist/lib/storage/session";
 import checkReducer from "./checkReducer";
-
 import todoReducer from "./todoReducer";
 
 const persistConfig = {
