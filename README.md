@@ -1,8 +1,12 @@
 # React News with TO-DO
 
 
+https://user-images.githubusercontent.com/108124042/212672277-d46b669f-a830-496a-a1af-47b53ea9a799.mp4
+
+
+
 1. react-create-app 명령어 사용해서 프로젝트 생성 및 github 레포지토리 연결
-2. 제공된 node서버를 실행
+2. 제공된 서버파일을 실행
 3. axios 라이브러리를 사용하여 데이터 json 불러오기
 3. 불러온 데이터를 기준으로 뉴스 컴포넌트에 출력
 4. 홈페이지, todo페이지, 뉴스컴포넌트, todo컴포넌트 각각 구성
@@ -15,7 +19,6 @@
 9. 저장된 todo가 오늘 일자에 맞게 출력되도록 filter 적용
 10. 체크박스기능 추가
 11. Css최종 적용
-12. 기능 테스트
 
 
  어려웠던 점
